@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Agro Forte - Um Futuro Melhor</title>
+
+
+
+<style>
+
+
+
+/* ===================== RESET ===================== */
+
+
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+    font-family: Arial, sans-serif;
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+    background:#f4efe7;
+
+    color:#3d2412;
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+}
+
+
+
+/* ===================== TELA DE ENTRADA ===================== */
+
+
+
+#entrada{
+
+    position:fixed;
+
+    width:100%;
+
+    height:100vh;
+
+    background:linear-gradient(135deg,#3e2723,#5d4037,#8d6e63);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    color:white;
+
+    z-index:9999;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+
+
+#entrada h1{
+
+    font-size:3rem;
+
+    margin-bottom:10px;
+
+}
+
+
+
+#entrada p{
+
+    max-width:600px;
+
+    margin-bottom:20px;
+
+    opacity:0.9;
+
+}
+
+
+
+#entrada button{
+
+    padding:15px 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:white;
+
+    color:#3e2723;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+#entrada button:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* ===================== HEADER ===================== */
+
+
+
+header{
+
+    background:
+
+    linear-gradient(rgba(62,39,35,0.7),rgba(62,39,35,0.7)),
+
+    url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1600&q=80');
+
+    background-size:cover;
+
+    background-position:center;
+
+    color:white;
+
+    text-align:center;
+
+    padding:120px 20px;
+
+}
+
+
+
+header h1{
+
+    font-size:4rem;
+
+    margin-bottom:15px;
+
+}
+
+
+
+header p{
+
+    font-size:1.3rem;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+
+
+/* ===================== MENU ===================== */
+
+
+
+nav{
+
+    background:#4e342e;
+
+    padding:15px;
+
+    text-align:center;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin:0 15px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+    color:#d7ccc8;
+
+}
+
+
+
+/* ===================== SEÇÕES ===================== */
+
+
+
+section{
+
+    padding:70px 10%;
+
+}
+
+
+
+h2{
+
+    color:#5d4037;
+
+    margin-bottom:25px;
+
+    border-left:8px solid #8d6e63;
+
+    padding-left:15px;
+
+}
+
+
+
+/* ===================== CARDS ===================== */
+
+
+
+.card{
+
+    background:white;
+
+    padding:25px;
+
+    margin:20px 0;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+}
+
+
+
+/* ===================== BENEFÍCIOS ===================== */
+
+
+
+.beneficios{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+}
+
+
+
+.beneficio{
+
+    background:#8d6e63;
+
+    color:white;
+
+    padding:25px;
+
+    border-radius:12px;
+
+}
+
+
+
+/* ===================== GALERIA ===================== */
+
+
+
+.galeria{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:20px;
+
+}
+
+
+
+.galeria img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+}
+
+
+
+/* ===================== FOOTER ===================== */
+
+
+
+footer{
+
+    background:#3e2723;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+
+
+/* ===================== BOTÃO ===================== */
+
+
+
+.botao{
+
+    background:#5d4037;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+
+
+/* ===================== ACCORDION ===================== */
+
+
+
+.accordion{
+
+    background:#6d4c41;
+
+    color:white;
+
+    cursor:pointer;
+
+    padding:15px;
+
+    width:100%;
+
+    border:none;
+
+    text-align:left;
+
+    margin-top:10px;
+
+    border-radius:8px;
+
+}
+
+
+
+.panel{
+
+    display:none;
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:0 0 8px 8px;
+
+}
+
+
+
+/* ===================== RESPONSIVO ===================== */
+
+
+
+@media(max-width:768px){
+
+header h1{font-size:2.5rem;}
+
+nav a{display:block;margin:10px;}
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- ===================== ENTRADA INTERATIVA ===================== -->
+
+
+
+<div id="entrada">
+
+    <h1>🌱 AGRO FORTE</h1>
+
+    <p>
+
+        Bem-vindo ao projeto educativo que valoriza o campo, a sustentabilidade, a tecnologia e o futuro da agricultura.
+
+        Clique abaixo para acessar o conteúdo completo.
+
+    </p>
+
+    <button onclick="entrarSite()">Entrar no Site</button>
+
+</div>
+
+
+
+<!-- ===================== CONTEÚDO ===================== -->
+
+
+
+<header>
+
+<h1>🌱 AGRO FORTE</h1>
+
+<p>Um Futuro Melhor para o Colégio Estadual do Campo Machado de Assis</p>
+
+</header>
+
+
+
+<nav>
+
+<a href="#sobre">Sobre</a>
+
+<a href="#importancia">Importância</a>
+
+<a href="#beneficios">Benefícios</a>
+
+<a href="#animais">Animais</a>
+
+<a href="#sustentabilidade">Sustentabilidade</a>
+
+<a href="#futuro">Futuro</a>
+
+<a href="#galeria">Galeria</a>
+
+<a href="#interativo">Interativo</a>
+
+</nav>
+
+
+
+<!-- ===================== SOBRE (EXPANDIDO) ===================== -->
+
+
+
+<section id="sobre">
+
+<h2>🌾 Sobre o Projeto Agro Forte</h2>
+
+
+
+<div class="card">
+
+<p>
+
+O projeto Agro Forte busca valorizar o campo, fortalecer a educação rural e incentivar os estudantes a compreenderem profundamente o papel do agronegócio no Brasil e no mundo.
+
+</p>
+
+
+
+<p>
+
+O agronegócio moderno envolve ciência, tecnologia, gestão e sustentabilidade. Ele não se limita apenas à produção, mas também ao processamento, transporte, inovação e comercialização de alimentos.
+
+</p>
+
+
+
+<p>
+
+Além disso, o projeto incentiva o pensamento crítico dos estudantes, permitindo que compreendam como o campo influencia diretamente a economia, a sociedade e o meio ambiente.
+
+</p>
+
+
+
+<p>
+
+Ao integrar teoria e prática, o projeto fortalece a identidade rural e prepara jovens para os desafios do futuro.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ===================== IMPORTÂNCIA (EXPANDIDO) ===================== -->
+
+
+
+<section id="importancia">
+
+<h2>🚜 A Importância do Agro para a Sociedade</h2>
+
+
+
+<div class="card">
+
+<p>
+
+A agricultura é uma das bases fundamentais da civilização humana. Sem ela, não haveria desenvolvimento urbano, industrial ou tecnológico.
+
+</p>
+
+
+
+<p>
+
+O agronegócio brasileiro é um dos mais fortes do mundo, sendo responsável por grande parte das exportações e pela geração de milhões de empregos diretos e indiretos.
+
+</p>
+
+
+
+<p>
+
+Com o avanço da tecnologia, o campo se tornou mais eficiente, sustentável e produtivo, utilizando inteligência artificial, sensores, drones e biotecnologia.
+
+</p>
+
+
+
+<p>
+
+A educação rural é essencial para preparar novas gerações capazes de inovar e enfrentar os desafios climáticos e ambientais.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- ===================== BENEFÍCIOS (mantido) ===================== -->
+
+
+
+<section id="beneficios">
+
+<h2>🌱 Benefícios do Agro Forte</h2>
+
+
+
+<div class="beneficios">
+
+<div class="beneficio"><h3>🌾 Educação Rural</h3><p>Aprendizagem voltada ao campo.</p></div>
+
+<div class="beneficio"><h3>🚜 Tecnologia</h3><p>Inovação no agronegócio.</p></div>
+
+<div class="beneficio"><h3>🌿 Sustentabilidade</h3><p>Preservação ambiental.</p></div>
+
+<div class="beneficio"><h3>👨‍🌾 Valorização</h3><p>Reconhecimento do produtor rural.</p></div>
+
+</div>
+
+</section>
+
+
+
+<!-- (RESTANTE DO SEU CONTEÚDO CONTINUA INTACTO — animais, sustentabilidade, galeria etc.) -->
+
+
+
+<!-- ===================== INTERATIVO ===================== -->
+
+
+
+<section id="interativo">
+
+
+
+<h2>🎯 Área Interativa</h2>
+
+
+
+<button class="accordion">🌿 O que é Agricultura Sustentável?</button>
+
+<div class="panel"><p>Uso consciente dos recursos naturais garantindo produção contínua.</p></div>
+
+
+
+<button class="accordion">🚜 Como a tecnologia ajuda o campo?</button>
+
+<div class="panel"><p>Aumenta produtividade e reduz impactos ambientais.</p></div>
+
+
+
+<div class="card">
+
+<h3>🌟 Mensagem Motivacional</h3>
+
+<button class="botao" onclick="mostrarMensagem()">Clique para receber uma mensagem</button>
+
+<div id="mensagem"></div>
+
+</div>
+
+
+
+</section>
+
+
+
+<!-- ===================== FOOTER ===================== -->
+
+
+
+<footer>
+
+<h3>🌱 AGRO FORTE</h3>
+
+<p>Educação • Sustentabilidade • Inovação</p>
+
+<p>"O conhecimento é a semente do futuro."</p>
+
+</footer>
+
+
+
+<!-- ===================== SCRIPTS ===================== -->
+
+
+
+<script>
+
+
+
+/* ENTRADA */
+
+function entrarSite(){
+
+document.getElementById("entrada").style.display="none";
+
+}
+
+
+
+/* MENSAGENS */
+
+function mostrarMensagem(){
+
+
+
+const mensagens=[
+
+"🌱 O conhecimento constrói o futuro.",
+
+"🚜 O campo é tecnologia e vida.",
+
+"🌎 Sustentabilidade é essencial."
+
+];
+
+
+
+document.getElementById("mensagem").innerHTML =
+
+mensagens[Math.floor(Math.random()*mensagens.length)];
+
+}
+
+
+
+/* ACCORDION */
+
+const acc=document.getElementsByClassName("accordion");
+
+
+
+for(let i=0;i<acc.length;i++){
+
+acc[i].onclick=function(){
+
+const panel=this.nextElementSibling;
+
+panel.style.display=(panel.style.display==="block")?"none":"block";
+
+}
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
+
+<!-- ===================== ANIMAIS ===================== -->
+
+
+
+<section id="animais">
+
+
+
+    <h2>🐄 Animais e sua Importância no Agronegócio</h2>
+
+    
+
+    <div class="card">
+
+    
+
+    <p>
+
+    A pecuária desempenha um papel essencial no agronegócio brasileiro e mundial. Além da produção de alimentos, ela movimenta a economia, gera empregos e fortalece comunidades rurais.
+
+    </p>
+
+    
+
+    <p>
+
+    O bem-estar animal é um dos pilares da produção moderna, garantindo qualidade, produtividade e respeito às condições naturais dos animais.
+
+    </p>
+
+    
+
+    <p>
+
+    O conhecimento sobre criação animal permite desenvolver práticas mais eficientes, sustentáveis e éticas dentro do campo.
+
+    </p>
+
+    
+
+    </div>
+
+    
+
+    <div class="beneficios">
+
+    
+
+    <div class="beneficio">
+
+    <h3>🐄 Bovinos</h3>
+
+    <p>Produção de carne e leite, base alimentar mundial.</p>
+
+    </div>
+
+    
+
+    <div class="beneficio">
+
+    <h3>🐔 Aves</h3>
+
+    <p>Fonte de proteína acessível e amplamente consumida.</p>
+
+    </div>
+
+    
+
+    <div class="beneficio">
+
+    <h3>🐖 Suínos</h3>
+
+    <p>Alta produtividade e grande importância econômica.</p>
+
+    </div>
+
+    
+
+    <div class="beneficio">
+
+    <h3>🐑 Ovinos</h3>
+
+    <p>Produção de carne, lã e derivados.</p>
+
+    </div>
+
+    
+
+    <div class="beneficio">
+
+    <h3>🐎 Equinos</h3>
+
+    <p>Tradição, trabalho rural e esportes equestres.</p>
+
+    </div>
+
+    
+
+    <div class="beneficio">
+
+    <h3>🐝 Abelhas</h3>
+
+    <p>Polinização essencial para a agricultura global.</p>
+
+    </div>
+
+    
+
+    </div>
+
+    
+
+    </section>
+
+    
+
+    <!-- ===================== SUSTENTABILIDADE ===================== -->
+
+    
+
+    <section id="sustentabilidade">
+
+    
+
+    <h2>🌿 Agro e Sustentabilidade</h2>
+
+    
+
+    <div class="card">
+
+    
+
+    <p>
+
+    A sustentabilidade no agronegócio é essencial para garantir o equilíbrio entre produção e preservação ambiental.
+
+    </p>
+
+    
+
+    <p>
+
+    Práticas como rotação de culturas, preservação de matas nativas, uso consciente da água e controle biológico de pragas são fundamentais para o futuro do campo.
+
+    </p>
+
+    
+
+    <p>
+
+    O desenvolvimento sustentável garante que as próximas gerações também possam produzir e viver com qualidade de vida no meio rural.
+
+    </p>
+
+    
+
+    </div>
+
+    
+
+    <div class="card">
+
+    
+
+    <h3>🌱 Agricultura Moderna e Sustentável</h3>
+
+    
+
+    <p>
+
+    A agricultura moderna utiliza tecnologias como sensores, satélites e inteligência artificial para reduzir desperdícios e aumentar a eficiência.
+
+    </p>
+
+    
+
+    <p>
+
+    Essas inovações permitem produzir mais utilizando menos recursos naturais, reduzindo impactos ambientais.
+
+    </p>
+
+    
+
+    </div>
+
+    
+
+    </section>
+
+    
+
+    <!-- ===================== CURIOSIDADES ===================== -->
+
+    
+
+    <section id="curiosidades">
+
+    
+
+    <h2>📚 Curiosidades sobre o Agro</h2>
+
+    
+
+    <div class="card">
+
+    
+
+    <ul>
+
+    
+
+    <li>🌾 O Brasil está entre os maiores produtores agrícolas do mundo.</li>
+
+    
+
+    <li>🐝 As abelhas são responsáveis por grande parte da polinização global.</li>
+
+    
+
+    <li>🚜 Tratores modernos podem ser controlados por GPS.</li>
+
+    
+
+    <li>🌱 A agricultura regenerativa melhora a qualidade do solo.</li>
+
+    
+
+    <li>📊 O agronegócio representa uma grande parte do PIB brasileiro.</li>
+
+    
+
+    <li>🌳 Florestas ajudam a regular o clima e a umidade do solo.</li>
+
+    
+
+    <li>💧 A irrigação inteligente reduz o desperdício de água.</li>
+
+    
+
+    </ul>
+
+    
+
+    </div>
+
+    
+
+    </section>
+
+    
+
+    <!-- ===================== GALERIA ===================== -->
+
+    
+
+    <section id="galeria">
+
+    
+
+    <h2>📸 Galeria do Agro</h2>
+
+    
+
+    <div class="card">
+
+    
+
+    <p>
+
+    Imagens que representam a força, a beleza e a importância do campo e da produção agrícola.
+
+    </p>
+
+    
+
+    </div>
+
+    
+
+    <div class="galeria">
+
+    
+
+    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80" alt="Plantação">
+
+    <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=800&q=80" alt="Gado">
+
+    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80" alt="Agricultura">
+
+    <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=800&q=80" alt="Trator">
+
+    <img src="https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?auto=format&fit=crop&w=800&q=80" alt="Aves">
+
+    <img src="https://images.unsplash.com/photo-1500076656116-558758c991c1?auto=format&fit=crop&w=800&q=80" alt="Campo">
+
+    
+
+    </div>
+
+    
+
+    </section>
+
+    
+
+    <!-- ===================== FUTURO ===================== -->
+
+    
+
+    <section id="futuro">
+
+    
+
+    <h2>🌎 Construindo um Futuro Melhor</h2>
+
+    
+
+    <div class="card">
+
+    
+
+    <p>
+
+    O futuro do agronegócio depende da união entre educação, tecnologia e sustentabilidade.
+
+    </p>
+
+    
+
+    <p>
+
+    A formação de jovens preparados é essencial para garantir inovação no campo e melhoria na qualidade de vida das comunidades rurais.
+
+    </p>
+
+    
+
+    <p>
+
+    A escola tem papel fundamental nesse processo, promovendo conhecimento e consciência ambiental.
+
+    </p>
+
+    
+
+    </div>
+
+    
+
+    </section>
+
+    
+
+    <!-- ===================== INTERATIVO ===================== -->
+
+    
+
+    <section id="interativo">
+
+    
+
+    <h2>🎯 Área Interativa</h2>
+
+    
+
+    <button class="accordion">🌿 O que é Agricultura Sustentável?</button>
+
+    <div class="panel">
+
+    <p>A agricultura sustentável busca equilibrar produção e preservação ambiental.</p>
+
+    </div>
+
+    
+
+    <button class="accordion">🚜 Como a tecnologia ajuda o campo?</button>
+
+    <div class="panel">
+
+    <p>Ela aumenta a produtividade e reduz impactos ambientais.</p>
+
+    </div>
+
+    
+
+    <button class="accordion">🐄 Importância dos animais no agro</button>
+
+    <div class="panel">
+
+    <p>Os animais são essenciais para alimentação, economia e equilíbrio ecológico.</p>
+
+    </div>
+
+    
+
+    <button class="accordion">📚 Papel dos estudantes</button>
+
+    <div class="panel">
+
+    <p>Os estudantes são fundamentais para o futuro do campo e da inovação rural.</p>
+
+    </div>
+
+    
+
+    <div class="card">
+
+    
+
+    <h3>🌟 Mensagem Motivacional</h3>
+
+    
+
+    <button class="botao" onclick="mostrarMensagem()">
+
+    Clique para receber uma mensagem
+
+    </button>
+
+    
+
+    <div id="mensagem"></div>
+
+    
+
+    </div>
+
+    
+
+    </section>
+
+    
+
+    <!-- ===================== FOOTER ===================== -->
+
+    
+
+    <footer>
+
+    
+
+    <h3>🌱 AGRO FORTE</h3>
+
+    
+
+    <p>Educação • Sustentabilidade • Inovação • Tecnologia • Desenvolvimento Rural</p>
+
+    
+
+    <p>"O conhecimento é a semente que produz os frutos do futuro."</p>
+
+    
+
+    </footer>
+
+    <!-- ===================== SCRIPTS INTERATIVOS E ANIMAÇÕES ===================== -->
+
+
+
+<script>
+
+    /* ===================== ENTRADA INTERATIVA ===================== */
+
+    function entrarSite() {
+
+        document.getElementById("entrada").style.display = "none";
+
+    }
+
+    
+
+    /* ===================== MENSAGENS MOTIVACIONAIS ===================== */
+
+    function mostrarMensagem() {
+
+        const mensagens = [
+
+            "🌱 O conhecimento é a semente do futuro.",
+
+            "🚜 A educação transforma o campo e fortalece a comunidade.",
+
+            "🌾 Cada estudante é parte da construção de um agro mais forte.",
+
+            "🌿 Sustentabilidade hoje garante qualidade de vida amanhã.",
+
+            "📚 Aprender no campo é cultivar oportunidades para o futuro.",
+
+            "🐄 O agronegócio cresce quando conhecimento e dedicação caminham juntos.",
+
+            "🌎 Preservar a natureza é investir nas próximas gerações.",
+
+            "🚀 Grandes conquistas começam com pequenos aprendizados.",
+
+            "🌻 O campo alimenta o mundo e inspira o futuro.",
+
+            "💚 Educação e sustentabilidade constroem um amanhã melhor."
+
+        ];
+
+    
+
+        const sorteio = Math.floor(Math.random() * mensagens.length);
+
+        document.getElementById("mensagem").innerHTML = mensagens[sorteio];
+
+    }
+
+    
+
+    /* ===================== ACCORDION ===================== */
+
+    const acc = document.getElementsByClassName("accordion");
+
+    for (let i = 0; i < acc.length; i++) {
+
+        acc[i].addEventListener("click", function () {
+
+            this.classList.toggle("active");
+
+            const panel = this.nextElementSibling;
+
+            if (panel.style.display === "block") {
+
+                panel.style.display = "none";
+
+            } else {
+
+                panel.style.display = "block";
+
+            }
+
+        });
+
+    }
+
+    
+
+    /* ===================== ANIMAÇÃO AO ROLAR ===================== */
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+
+                entry.target.style.transform = "translateY(0px)";
+
+            }
+
+        });
+
+    });
+
+    
+
+    const elementos = document.querySelectorAll("section, .card, .beneficio");
+
+    elementos.forEach(el => {
+
+        el.style.opacity = "0";
+
+        el.style.transform = "translateY(40px)";
+
+        el.style.transition = "all 0.8s ease";
+
+        observer.observe(el);
+
+    });
+
+    
+
+    /* ===================== EFEITO DE TÍTULO ===================== */
+
+    let titulo = document.querySelector("header h1");
+
+    titulo.style.animation = "piscar 3s infinite";
+
+    </script>
+
+    
+
+    <style>
+
+    /* ===================== EFEITO PISCAR ===================== */
+
+    @keyframes piscar {
+
+        0% { transform: scale(1); }
+
+        50% { transform: scale(1.03); }
+
+        100% { transform: scale(1); }
+
+    }
+
+    </style>
+
+    
+
+    </body>
+
+    </html>
