@@ -1,1 +1,16 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+    scroll-behavior:smooth;
+}
 
+body{
+    background:#f4efe7;
+    color:#3d2412;
+    line-height:1.7;
+}
+
+/* restante do CSS */
