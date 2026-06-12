@@ -1,4 +1,8 @@
-{
+/* ===========================
+   RESET GERAL
+=========================== */
+
+*{
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -26,6 +30,9 @@ body{
 
 }
 
+/* ===========================
+   SCROLL CUSTOMIZADO
+=========================== */
 
 ::-webkit-scrollbar{
     width:10px;
@@ -40,7 +47,11 @@ body{
     border-radius:20px;
 }
 
-{
+/* ===========================
+   TELA DE ENTRADA
+=========================== */
+
+#entrada{
 
     position:fixed;
     width:100%;
@@ -65,7 +76,8 @@ body{
     animation:fadeIn 1.5s ease;
 
 }
-h1{
+
+#entrada h1{
 
     font-size:5rem;
     margin-bottom:20px;
@@ -74,7 +86,8 @@ h1{
     3px 3px 10px rgba(0,0,0,.3);
 
 }
- p{
+
+#entrada p{
 
     max-width:700px;
     font-size:1.2rem;
@@ -82,7 +95,7 @@ h1{
 
 }
 
-{
+#entrada button{
 
     padding:15px 35px;
     border:none;
@@ -99,14 +112,19 @@ h1{
     transition:.4s;
 
 }
-{
+
+#entrada button:hover{
 
     transform:translateY(-5px);
     box-shadow:var(--sombra);
 
 }
 
-{
+/* ===========================
+   HEADER
+=========================== */
+
+header{
 
     min-height:100vh;
 
@@ -146,7 +164,11 @@ header p{
 
 }
 
-{
+/* ===========================
+   MENU
+=========================== */
+
+nav{
 
     position:sticky;
     top:0;
@@ -164,7 +186,7 @@ header p{
 
 }
 
-{
+nav a{
 
     color:white;
     text-decoration:none;
@@ -183,7 +205,9 @@ nav a:hover{
 
 }
 
-
+/* ===========================
+   SEÇÕES
+=========================== */
 
 section{
 
@@ -221,7 +245,11 @@ h2::after{
 
 }
 
-{
+/* ===========================
+   CARDS
+=========================== */
+
+.card{
 
     background:white;
 
@@ -247,9 +275,11 @@ h2::after{
 
 }
 
+/* ===========================
+   BENEFÍCIOS
+=========================== */
 
-
-{
+.beneficios{
 
     display:grid;
 
@@ -260,7 +290,7 @@ h2::after{
 
 }
 
-{
+.beneficio{
 
     background:
     linear-gradient(
@@ -280,7 +310,7 @@ h2::after{
 
 }
 
-:hover{
+.beneficio:hover{
 
     transform:
     scale(1.05)
@@ -288,6 +318,11 @@ h2::after{
 
 }
 
+/* ===========================
+   GALERIA
+=========================== */
+
+.galeria{
 
     display:grid;
 
@@ -365,7 +400,12 @@ h2::after{
     box-shadow:var(--sombra);
 
 }
-{
+
+/* ===========================
+   BOTÕES
+=========================== */
+
+.botao{
 
     padding:15px 25px;
 
@@ -396,7 +436,11 @@ h2::after{
 
 }
 
-{
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
 
     background:
     linear-gradient(
@@ -412,13 +456,16 @@ h2::after{
 
 }
 
- h3{
+footer h3{
 
     font-size:2rem;
     margin-bottom:15px;
 
 }
 
+/* ===========================
+   ANIMAÇÕES
+=========================== */
 
 @keyframes fadeIn{
 
@@ -432,6 +479,9 @@ h2::after{
 
 }
 
+/* ===========================
+   RESPONSIVO
+=========================== */
 
 @media(max-width:768px){
 
